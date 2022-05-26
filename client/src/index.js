@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './App.jsx';
 import './main.scss';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(
+    <StrictMode>
+        <App />
+    </StrictMode>,
+    document.querySelector('#root')
+);

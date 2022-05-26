@@ -7,11 +7,15 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    devServer: {
+        port: 3000,
     },
     module: {
         rules: [
             {
-                test: /\.?js$/,
+                test: /\.(jsx|js)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
