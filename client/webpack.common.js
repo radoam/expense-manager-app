@@ -12,6 +12,12 @@ module.exports = {
     devServer: {
         port: 3000,
     },
+    resolve: {
+        alias: {
+            src: path.join(__dirname, 'src'),
+        },
+        extensions: ['.js', '.jsx', '.json'],
+    },
     module: {
         rules: [
             {
