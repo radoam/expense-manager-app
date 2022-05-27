@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const App = () => {
-    const name: string = "Rado";
+  const name = 'Rado';
 
-    return (
-        <h1 className="helloWorld">Hello world {name}</h1>
-    )
-}
+  return <h1 className="helloWorld">Hello world {name}</h1>;
+};
 
 export default App;

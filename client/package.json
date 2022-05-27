@@ -9,7 +9,10 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "rm -rf dist && webpack --config webpack.prod.js",
-    "build:dev": "rm -rf dist && webpack --config webpack.dev.js"
+    "build:dev": "rm -rf dist && webpack --config webpack.dev.js",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./src",
+    "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,json,css,scss,html}' --config ./.prettierrc"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -24,11 +27,19 @@
     "@svgr/webpack": "^6.2.1",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "prettier": "^2.6.2",
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
     "ts-loader": "^9.3.0",
