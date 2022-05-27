@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: path.join(__dirname, 'src', 'index.js'),
+    entry: path.join(__dirname, 'src', 'index.tsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -16,17 +16,17 @@ module.exports = {
         alias: {
             src: path.join(__dirname, 'src'),
         },
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     },
     module: {
         rules: [
             {
-                test: /\.(jsx|js)$/,
+                test: /\.(jsx|js|tsx|ts)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        presets: ['@babel/preset-env', '@babel/preset-react', "@babel/preset-typescript"],
                     },
                 },
             },
