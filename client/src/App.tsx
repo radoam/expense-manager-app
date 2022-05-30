@@ -1,9 +1,15 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-const App = () => {
-  const name = 'Rado';
+import { Home } from './pages/Home';
+import { NotFound } from './pages/NotFound';
 
-  return <h1 className="text-3xl font-bold">Hello world! {name}</h1>;
-};
+const App = () => (
+  <Routes>
+    <Route path="*" element={<NotFound />} />
+
+    <Route path="/" element={<Home />} />
+  </Routes>
+);
 
 export default App;

@@ -7,10 +7,12 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devServer: {
-    port: 3000
+    port: 3000,
+    historyApiFallback: { index: '/', disableDotRule: true }
   },
   resolve: {
     alias: {
