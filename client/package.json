@@ -14,6 +14,20 @@
     "lint:fix": "eslint --fix ./",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,json,css,scss,html}' --config ./.prettierrc"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --quiet --fix"
+    ],
+    "*.{json,css,scss,html,md}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "react": "^18.1.0",
@@ -38,6 +52,8 @@
     "eslint-plugin-react": "^7.30.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
     "mini-css-extract-plugin": "^2.6.0",
     "prettier": "^2.6.2",
     "sass": "^1.52.1",
