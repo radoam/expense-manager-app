@@ -48,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Expense manager app',
+      title: 'Unicoin',
       favicon: path.join(__dirname, 'public', 'favicon.svg'),
       template: path.join(__dirname, 'public', 'index.html')
     }),
