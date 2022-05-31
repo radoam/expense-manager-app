@@ -1,3 +1,3 @@
 export type ButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
 };
