@@ -1,2 +1,2 @@
-# expense-manager-app
+# Unicoin
 Manage your personal finances and easily track your money, expenses and budget.
