@@ -7,8 +7,11 @@ export default {
   title: 'Button',
   component: Button,
   argTypes: {
-    children: { control: 'text', defaultValue: 'Default' }
+    children: { control: 'text', defaultValue: 'Default' },
+    disabled: { control: 'boolean', defaultValue: false }
   }
 } as ComponentMeta<typeof Button>;
 
-export const Default: ComponentStory<typeof Button> = ({ children }) => <Button>{children}</Button>;
+export const Default: ComponentStory<typeof Button> = ({ children, disabled }) => (
+  <Button disabled={disabled}>{children}</Button>
+);
