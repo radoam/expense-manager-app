@@ -4,11 +4,20 @@ module.exports = {
     colors: {
       white: '#FFFFFF',
       black: '#000000',
-      blue: '#0070F3',
-      gray: '#6b7280',
-      'gray-dark': '#d1d5db'
+      blue: '#0070F3'
     },
-    extend: {}
+    extend: {
+      width: {
+        auto: 'auto'
+      },
+      minWidth: {
+        20: '5rem',
+        36: '9rem',
+        48: '12rem',
+        60: '15rem',
+        72: '18rem'
+      }
+    }
   },
   plugins: []
 };
