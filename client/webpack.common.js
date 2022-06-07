@@ -2,6 +2,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { ProvidePlugin } = require('webpack');
 
 module.exports = {
   entry: path.join(__dirname, 'src', 'index.tsx'),
@@ -54,6 +55,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'main.css',
       chunkFilename: 'main.[id].css'
+    }),
+    new ProvidePlugin({
+      React: 'react'
     })
   ]
 };
