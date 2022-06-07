@@ -4,6 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "jsx": "react",
+    "jsxImportSource": "@emotion/react",
     "moduleResolution": "node",
     "strict": true,
     "sourceMap": true,
