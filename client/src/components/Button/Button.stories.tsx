@@ -10,7 +10,7 @@ export default {
     children: { control: 'text', defaultValue: 'Default' },
     disabled: { control: 'boolean', defaultValue: false },
     size: {
-      options: ['xs', 'sm', 'lg', 'xl', 'auto'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl', 'auto'],
       control: { type: 'select' }
     }
   }
