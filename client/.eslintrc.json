@@ -23,19 +23,15 @@
     // Standard
     "no-duplicate-imports": "error",
     "no-var": "error",
+    "no-self-compare": "error",
     "prefer-const": "error",
-    "prefer-template": "warn",
     "no-console": "error",
     "arrow-body-style": ["error", "as-needed"],
+    "prefer-template": "warn",
 
     // React
-    "react/display-name": "off",
-    "react/prop-types": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
-
-    // TypeScript
-    "@typescript-eslint/no-var-requires": "off"
+    "react/no-deprecated": "error",
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {
@@ -46,6 +42,7 @@
     {
       "files": ["src/**/*"],
       "rules": {
+        // Ordering imports
         "import/order": [
           "error",
           {
@@ -54,6 +51,19 @@
             "alphabetize": {
               "order": "asc"
             }
+          }
+        ],
+        // Restricted imports and non-tree-shakable modules
+        "no-restricted-imports": [
+          "error",
+          {
+            "paths": [
+              {
+                "message": "Please use import module from 'lodash/module' instead.",
+                "name": "lodash"
+              }
+            ],
+            "patterns": ["!lodash/**"]
           }
         ]
       }
