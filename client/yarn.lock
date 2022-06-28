@@ -1099,7 +1099,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.17.8", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.3", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   version "7.18.3"
   resolved "https://nexus3.egnyte-internal.com/repository/npm/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
   integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
@@ -2689,6 +2689,15 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@tanem/svg-injector@^10.1.24":
+  version "10.1.25"
+  resolved "https://nexus3.egnyte-internal.com/repository/npm/@tanem/svg-injector/-/svg-injector-10.1.25.tgz#2211d761ba9aab2d1543c6eb98db6c45d1417c9c"
+  integrity sha512-722MbxV66Mf6tExVSQnZM2eeAgoYh0HZIcXOHaDf/h6Gw4BJRp6Mjp+B/6ex5uTf9d+ZRq3xXYBfNIAo7m/Arg==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    content-type "^1.0.4"
+    tslib "^2.4.0"
+
 "@testing-library/dom@^8.3.0":
   version "8.13.0"
   resolved "https://nexus3.egnyte-internal.com/repository/npm/@testing-library/dom/-/dom-8.13.0.tgz#bc00bdd64c7d8b40841e27a70211399ad3af46f5"
@@ -2933,7 +2942,7 @@
   resolved "https://nexus3.egnyte-internal.com/repository/npm/@types/pretty-hrtime/-/pretty-hrtime-1.0.1.tgz#72a26101dc567b0d68fd956cf42314556e42d601"
   integrity sha512-VjID5MJb1eGKthz2qUerWT8+R4b9N+CHvGCzg9fn4kWZgaF9AhdYikQio3R7wV8YY1NsQKPaCwKz1Yff+aHNUQ==
 
-"@types/prop-types@*":
+"@types/prop-types@*", "@types/prop-types@^15.7.5":
   version "15.7.5"
   resolved "https://nexus3.egnyte-internal.com/repository/npm/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
@@ -4891,7 +4900,7 @@ content-disposition@0.5.4:
   dependencies:
     safe-buffer "5.2.1"
 
-content-type@~1.0.4:
+content-type@^1.0.4, content-type@~1.0.4:
   version "1.0.4"
   resolved "https://nexus3.egnyte-internal.com/repository/npm/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
@@ -10244,6 +10253,16 @@ react-router@6.3.0:
   dependencies:
     history "^5.2.0"
 
+react-svg@^15.0.4:
+  version "15.0.4"
+  resolved "https://nexus3.egnyte-internal.com/repository/npm/react-svg/-/react-svg-15.0.4.tgz#a8fa548c4da2ce921e31c9b913746ca6abf5f37d"
+  integrity sha512-X2LtBaTHoX6Qtriv/ywG3nC9sMOADCOpSRuH7VSe/+jJ/DOQocftX9LgZbmQsBsI9thG5Vz9Ib2o6ISXF6+VrA==
+  dependencies:
+    "@babel/runtime" "^7.18.3"
+    "@tanem/svg-injector" "^10.1.24"
+    "@types/prop-types" "^15.7.5"
+    prop-types "^15.8.1"
+
 react-syntax-highlighter@^15.4.5:
   version "15.5.0"
   resolved "https://nexus3.egnyte-internal.com/repository/npm/react-syntax-highlighter/-/react-syntax-highlighter-15.5.0.tgz#4b3eccc2325fa2ec8eff1e2d6c18fa4a9e07ab20"
@@ -11869,7 +11888,7 @@ tslib@^1.8.1, tslib@^1.9.3:
   resolved "https://nexus3.egnyte-internal.com/repository/npm/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0:
+tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0:
   version "2.4.0"
   resolved "https://nexus3.egnyte-internal.com/repository/npm/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
