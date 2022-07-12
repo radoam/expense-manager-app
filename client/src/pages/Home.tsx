@@ -1,1 +1,3 @@
-export const Home = () => <h1>Home:</h1>;
+import { Box } from '../components/Layout/Box/Box';
+
+export const Home = () => <Box>test</Box>;
